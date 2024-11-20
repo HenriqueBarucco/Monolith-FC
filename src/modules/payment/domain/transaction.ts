@@ -25,6 +25,8 @@ export default class Transaction extends BaseEntity implements AggregateRoot {
   }
 
   validate(): void {
+    console.log(this._amount)
+    console.log(this)
     if (this._amount <= 0) {
       throw new Error('Amount must be greater than 0')
     }
